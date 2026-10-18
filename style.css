@@ -1,4 +1,7 @@
-/* Custom CSS Variables & Reset */
+
+/* =========================
+   1. CUSTOM VARIABLES & RESET
+========================= */
 :root {
   --primary-color: #0b3c5d;
   --secondary-color: #f1c40f;
@@ -15,6 +18,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-main);
   line-height: 1.6;
@@ -22,13 +29,16 @@ body {
   background-color: var(--bg-light);
   min-width: 320px;
   width: 100%;
+  overflow-x: hidden;
 }
 
-/* Header & Nav - Flexbox */
+/* =========================
+   2. HEADER & NAVIGATION
+========================= */
 .main-header {
   background-color: var(--primary-color);
   color: var(--text-light);
-  padding: 1.2rem 5%;
+  padding: 1rem;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -38,42 +48,50 @@ body {
 
 .nav-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  width: 100%;
   gap: 1rem;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 .logo-section h1 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 800;
   color: var(--secondary-color);
-  letter-spacing: 1.5px;
-  text-align: center;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  line-height: 1.3;
 }
 
 .logo-section p {
-  font-size: 0.9rem;
-  color: #ecf0f1;
+  color: var(--text-light);
+  font-size: 1rem;
   text-align: center;
 }
 
 .nav-links {
   display: flex;
-  list-style: none;
-  gap: 2rem;
-  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
 }
 
 .nav-links a {
+  display: block;
   color: var(--text-light);
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
-  transition: all 0.3s ease;
   padding: 0.5rem 0.8rem;
-  border-radius: 4px;
+  border-radius: 5px;
+  white-space: nowrap;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .nav-links a:hover,
@@ -83,15 +101,24 @@ body {
   border-bottom: 3px solid var(--secondary-color);
 }
 
-/* Hero Section - Farta oo la Yaraysay & Si Nadiif ah loo Dhigay */
+/* =========================
+   3. HERO SECTION
+========================= */
 .hero {
-  background: linear-gradient(rgba(11, 60, 93, 0.5), rgba(11, 60, 93, 0.65)),
-              url('https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+  background:
+    linear-gradient(
+      rgba(11, 60, 93, 0.5),
+      rgba(11, 60, 93, 0.65)
+    ),
+    url('https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=1920&q=80')
+    center / cover no-repeat;
+
   color: var(--text-light);
   padding: 6rem 5%;
   text-align: center;
   width: 100%;
   min-height: 55vh;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -99,7 +126,7 @@ body {
 }
 
 .hero h2 {
-  font-size: 2rem; /* Cabbirka farta ee la yaraysay */
+  font-size: 2rem;
   margin-bottom: 1rem;
   font-weight: 700;
   max-width: 800px;
@@ -109,13 +136,16 @@ body {
 
 .hero p {
   max-width: 700px;
-  margin: 0 auto 2rem auto;
+  margin: 0 auto 2rem;
   font-size: 1.05rem;
   line-height: 1.6;
   color: #f1f2f6;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
+/* =========================
+   4. BUTTON
+========================= */
 .btn {
   display: inline-block;
   background-color: var(--accent-color);
@@ -136,7 +166,9 @@ body {
   transform: translateY(-2px);
 }
 
-/* Container & Section Title - (Xariiqdii waa la saaray) */
+/* =========================
+   5. CONTAINER & TITLES
+========================= */
 .container {
   width: 100%;
   max-width: 1300px;
@@ -152,6 +184,9 @@ body {
   font-weight: 700;
 }
 
+/* =========================
+   6. GRID & CARDS
+========================= */
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -159,7 +194,6 @@ body {
   width: 100%;
 }
 
-/* Card Styling */
 .card {
   background-color: #ffffff;
   border-radius: 12px;
@@ -175,10 +209,10 @@ body {
 }
 
 .card-img {
+  display: block;
   width: 100%;
   height: 200px;
   object-fit: cover;
-  display: block;
 }
 
 .card-body {
@@ -198,14 +232,17 @@ body {
   line-height: 1.6;
 }
 
-/* Form Styling */
+/* =========================
+   7. CONTACT FORM
+========================= */
 .contact-form {
+  width: 100%;
   max-width: 750px;
   margin: 0 auto;
   background: #ffffff;
   padding: 2.5rem;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
 }
 
 .form-group {
@@ -221,6 +258,7 @@ body {
 
 .form-group input,
 .form-group textarea {
+  display: block;
   width: 100%;
   padding: 0.85rem;
   border: 1px solid #dcdde1;
@@ -229,7 +267,13 @@ body {
   font-size: 0.95rem;
 }
 
-/* Footer */
+.form-group textarea {
+  resize: vertical;
+}
+
+/* =========================
+   8. FOOTER
+========================= */
 footer {
   background-color: var(--primary-color);
   color: var(--text-light);
@@ -244,24 +288,113 @@ footer {
   color: #d1d8e0;
 }
 
-/* Media Queries (Responsive) */
-@media (min-width: 768px) {
+/* =========================
+   9. MOBILE NAVIGATION
+========================= */
+@media (max-width: 767px) {
+  .main-header {
+    padding: 1.2rem 0.5rem;
+  }
+
   .nav-container {
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .logo-section {
+    width: 100%;
+    text-align: center;
+  }
+
+  .logo-section h1 {
+    font-size: 2rem;
+  }
+
+  .logo-section p {
+    display: block;
+    font-size: 1rem;
+  }
+
+  /* Laba link saf kasta */
+  .nav-links {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    column-gap: 1.5rem;
+    row-gap: 0.8rem;
+    width: 100%;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+    padding: 0.4rem 0.6rem;
+    text-align: center;
+  }
+
+  .hero {
+    min-height: 55vh;
+    padding: 4rem 1.2rem;
   }
 
   .hero h2 {
-    font-size: 2.4rem;
+    font-size: 1.8rem;
+    line-height: 1.4;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .container {
+    padding: 2.5rem 1rem;
+  }
+
+  .section-title {
+    font-size: 1.7rem;
   }
 
   .grid-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .contact-form {
+    padding: 1.3rem;
+  }
+
+  .btn {
+    max-width: 100%;
+    padding: 0.75rem 1.3rem;
   }
 }
 
+/* =========================
+   10. TABLET
+========================= */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .nav-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero h2 {
+    font-size: 2.2rem;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* =========================
+   11. DESKTOP
+========================= */
 @media (min-width: 1024px) {
   .grid-container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
