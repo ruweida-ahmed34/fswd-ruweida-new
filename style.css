@@ -24,11 +24,11 @@ body {
   width: 100%;
 }
 
-/* Header & Nav - Flexbox */
+/* Header & Nav - Hal Saf oo Siman (Single Row) */
 .main-header {
   background-color: var(--primary-color);
   color: var(--text-light);
-  padding: 1.2rem 5%;
+  padding: 0.6rem 0.5rem;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -38,52 +38,51 @@ body {
 
 .nav-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
-  gap: 1rem;
+  flex-wrap: nowrap !important;
 }
 
 .logo-section h1 {
-  font-size: 2rem;
+  font-size: 1rem; /* Cabirka logo-ga oo mobile-ka ku habboon */
   font-weight: 800;
   color: var(--secondary-color);
-  letter-spacing: 1.5px;
-  text-align: center;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
 }
 
 .logo-section p {
-  font-size: 0.9rem;
-  color: #ecf0f1;
-  text-align: center;
+  display: none;
 }
 
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: center;
+  gap: 0.2rem; /* Booska u dhexeeya links-ka oo la yareeyay */
+  flex-wrap: nowrap !important;
+  align-items: center;
 }
 
 .nav-links a {
   color: var(--text-light);
   text-decoration: none;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.72rem; /* Farta oo la yareeyay si ay hal saf ugu wada gasho */
   transition: all 0.3s ease;
-  padding: 0.5rem 0.8rem;
+  padding: 0.15rem 0.2rem;
   border-radius: 4px;
+  white-space: nowrap !important;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
   color: var(--secondary-color);
   background: rgba(255, 255, 255, 0.08);
-  border-bottom: 3px solid var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
 }
-
-/* Hero Section - Farta oo la Yaraysay & Si Nadiif ah loo Dhigay */
+/* Hero Section */
 .hero {
   background: linear-gradient(rgba(11, 60, 93, 0.5), rgba(11, 60, 93, 0.65)),
               url('https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
@@ -99,7 +98,7 @@ body {
 }
 
 .hero h2 {
-  font-size: 2rem; /* Cabbirka farta ee la yaraysay */
+  font-size: 2rem;
   margin-bottom: 1rem;
   font-weight: 700;
   max-width: 800px;
@@ -136,7 +135,7 @@ body {
   transform: translateY(-2px);
 }
 
-/* Container & Section Title - (Xariiqdii waa la saaray) */
+/* Container & Section Title */
 .container {
   width: 100%;
   max-width: 1300px;
@@ -223,7 +222,7 @@ body {
 .form-group textarea {
   width: 100%;
   padding: 0.85rem;
-  border: 1px solid #dcdde1;
+  border: 1px 1px solid #dcdde1;
   border-radius: 6px;
   font-family: inherit;
   font-size: 0.95rem;
@@ -246,11 +245,6 @@ footer {
 
 /* Media Queries (Responsive) */
 @media (min-width: 768px) {
-  .nav-container {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
   .hero h2 {
     font-size: 2.4rem;
   }
