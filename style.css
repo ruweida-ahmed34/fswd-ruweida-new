@@ -32,6 +32,7 @@ body {
   overflow-x: hidden;
 }
 
+<<<<<<< HEAD
 /* =========================
    2. HEADER & NAVIGATION
 ========================= */
@@ -39,6 +40,13 @@ body {
   background-color: var(--primary-color);
   color: var(--text-light);
   padding: 1rem;
+=======
+/* Header & Nav - Hal Saf oo Siman (Single Row) */
+.main-header {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  padding: 0.6rem 0.5rem;
+>>>>>>> f52961eeadbe2ac14979dfa91ec8e5786668edda
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -51,6 +59,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+<<<<<<< HEAD
   gap: 1rem;
   width: 100%;
   max-width: 1300px;
@@ -59,10 +68,19 @@ body {
 
 .logo-section h1 {
   font-size: 1.8rem;
+=======
+  width: 100%;
+  flex-wrap: nowrap !important;
+}
+
+.logo-section h1 {
+  font-size: 1rem; /* Cabirka logo-ga oo mobile-ka ku habboon */
+>>>>>>> f52961eeadbe2ac14979dfa91ec8e5786668edda
   font-weight: 800;
   color: var(--secondary-color);
   letter-spacing: 0.5px;
   white-space: nowrap;
+<<<<<<< HEAD
   line-height: 1.3;
 }
 
@@ -70,16 +88,29 @@ body {
   color: var(--text-light);
   font-size: 1rem;
   text-align: center;
+=======
+}
+
+.logo-section p {
+  display: none;
+>>>>>>> f52961eeadbe2ac14979dfa91ec8e5786668edda
 }
 
 .nav-links {
   display: flex;
+<<<<<<< HEAD
   flex-direction: row;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   gap: 0.5rem;
   list-style: none;
+=======
+  list-style: none;
+  gap: 0.2rem; /* Booska u dhexeeya links-ka oo la yareeyay */
+  flex-wrap: nowrap !important;
+  align-items: center;
+>>>>>>> f52961eeadbe2ac14979dfa91ec8e5786668edda
 }
 
 .nav-links a {
@@ -87,23 +118,35 @@ body {
   color: var(--text-light);
   text-decoration: none;
   font-weight: 600;
+<<<<<<< HEAD
   font-size: 1rem;
   padding: 0.5rem 0.8rem;
   border-radius: 5px;
   white-space: nowrap;
   transition: color 0.3s ease, background-color 0.3s ease;
+=======
+  font-size: 0.72rem; /* Farta oo la yareeyay si ay hal saf ugu wada gasho */
+  transition: all 0.3s ease;
+  padding: 0.15rem 0.2rem;
+  border-radius: 4px;
+  white-space: nowrap !important;
+>>>>>>> f52961eeadbe2ac14979dfa91ec8e5786668edda
 }
 
 .nav-links a:hover,
 .nav-links a.active {
   color: var(--secondary-color);
   background: rgba(255, 255, 255, 0.08);
-  border-bottom: 3px solid var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
 }
+<<<<<<< HEAD
 
 /* =========================
    3. HERO SECTION
 ========================= */
+=======
+/* Hero Section */
+>>>>>>> f52961eeadbe2ac14979dfa91ec8e5786668edda
 .hero {
   background:
     linear-gradient(
@@ -166,9 +209,13 @@ body {
   transform: translateY(-2px);
 }
 
+<<<<<<< HEAD
 /* =========================
    5. CONTAINER & TITLES
 ========================= */
+=======
+/* Container & Section Title */
+>>>>>>> f52961eeadbe2ac14979dfa91ec8e5786668edda
 .container {
   width: 100%;
   max-width: 1300px;
@@ -261,7 +308,7 @@ body {
   display: block;
   width: 100%;
   padding: 0.85rem;
-  border: 1px solid #dcdde1;
+  border: 1px 1px solid #dcdde1;
   border-radius: 6px;
   font-family: inherit;
   font-size: 0.95rem;
@@ -288,6 +335,7 @@ footer {
   color: #d1d8e0;
 }
 
+<<<<<<< HEAD
 /* =========================
    9. MOBILE NAVIGATION
 ========================= */
@@ -340,6 +388,10 @@ footer {
     padding: 4rem 1.2rem;
   }
 
+=======
+/* Media Queries (Responsive) */
+@media (min-width: 768px) {
+>>>>>>> f52961eeadbe2ac14979dfa91ec8e5786668edda
   .hero h2 {
     font-size: 1.8rem;
     line-height: 1.4;
